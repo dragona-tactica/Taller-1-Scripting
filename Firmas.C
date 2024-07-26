@@ -26,7 +26,7 @@ class Program
         int producto = Multiplicar(6, 8);
         Console.WriteLine($"Resultado de la multiplicacion: {producto}");
         
-        string cadenaOriginal = "William";
+        string cadenaOriginal = "Beltran";
         string cadenaInvertida = InvertirCadena(cadenaOriginal);
         Console.WriteLine($"Cadena original: {cadenaOriginal}");
         Console.WriteLine($"Cadena invertida: {cadenaInvertida}");
@@ -45,6 +45,10 @@ class Program
         {
             Console.WriteLine($"El número {numero} es impar.");
         }
+
+        string palabra = "William";
+        int numeroLetras = ContarLetras(palabra);
+        Console.WriteLine($"La palabra '{palabra}' tiene {numeroLetras} letras.");
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -129,4 +133,11 @@ class Program
         {
             return numero % 2 == 0;
         }
+
+    // Funcion 12: cuenta el número de letras en una palabra
+    static int ContarLetras(string palabra)
+    {
+        return palabra.Length;
+    }
+
 }
