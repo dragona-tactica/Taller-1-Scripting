@@ -97,6 +97,17 @@ class Program
         double radio = 7.0;
         double areaCirculo = CalcularAreaCirculo(radio);
         Console.WriteLine($"El area del circulo con radio {radio} es: {areaCirculo}");
+
+        Console.WriteLine("Funcion 19");
+        int numeroPrimo = 29;
+        if (EsPrimo(numeroPrimo))
+        {
+            Console.WriteLine($"El número {numeroPrimo} es primo.");
+        }
+        else
+        {
+            Console.WriteLine($"El número {numeroPrimo} no es primo.");
+        }
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -254,4 +265,18 @@ class Program
     {
         return Math.PI * radio * radio;
     }
+
+    // Funcion 19: determina si un número es primo
+static bool EsPrimo(int numero)
+{
+    if (numero <= 1) return false; // Los números menores o iguales a 1 no son primos
+
+    // Verificar divisibilidad desde 2 hasta la raíz cuadrada del número
+    for (int i = 2; i <= Math.Sqrt(numero); i++)
+    {
+        if (numero % i == 0) return false; // Si es divisible por i, no es primo
+    }
+
+    return true; // Si no es divisible por ningún número en el rango, es primo
+}
 }
