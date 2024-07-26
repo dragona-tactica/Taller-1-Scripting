@@ -28,7 +28,9 @@ class Program
         Console.WriteLine($"Longitud del texto '{texto}': {longitud}");
 
         Console.WriteLine("Funcion 7");
-        ImprimirMensaje("Heartless");
+        string palabraVocales = "Cielo";
+        int numeroVocales = ContarVocales(palabraVocales);
+        Console.WriteLine($"La palabra '{palabraVocales}' tiene {numeroVocales} vocales.");
 
         Console.WriteLine("Funcion 8");
         int producto = Multiplicar(6, 8);
@@ -161,10 +163,22 @@ class Program
         return texto.Length;
     }
     
-    // Funcion 7: Función con parámetros y sin retorno
-    static void ImprimirMensaje(string mensaje)
+    // Funcion 7: cuenta el número de vocales en una palabra
+    static int ContarVocales(string palabraVocales)
     {
-        Console.WriteLine($"Mensaje: {mensaje}");
+        int contador = 0;
+        string vocales = "aeiouAEIOU"; // Incluye tanto minúsculas como mayúsculas
+        
+        for (int i = 0; i < palabraVocales.Length; i++)
+        {
+            char letra = palabraVocales[i];
+            if (vocales.IndexOf(letra) != -1)
+            {
+                contador++;
+            }
+        }
+        
+        return contador;
     }
     
     // Funcion 8: con parámetros y con retorno
