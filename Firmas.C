@@ -13,6 +13,9 @@ class Program
         
         int resultado = Sumar(5, 7);
         Console.WriteLine($"Resultado de la suma de 5 y 7: {resultado}");
+        
+        int[,] miMatriz = { { 1, 2 }, { 3, 4 } };
+        ImprimirMatriz(miMatriz);
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -41,5 +44,19 @@ class Program
     {
         return a + b;
     }
+    
+    // Función 5: con una matriz como parametro
+    static void ImprimirMatriz(int[,] matriz)
+    {
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                Console.Write(matriz[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
 
 }
