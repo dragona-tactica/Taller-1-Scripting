@@ -25,6 +25,11 @@ class Program
          
         int producto = Multiplicar(6, 8);
         Console.WriteLine($"Resultado de la multiplicacion: {producto}");
+        
+        string cadenaOriginal = "williamn";
+        string cadenaInvertida = InvertirCadena(cadenaOriginal);
+        Console.WriteLine($"Cadena original: {cadenaOriginal}");
+        Console.WriteLine($"Cadena invertida: {cadenaInvertida}");
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -83,5 +88,13 @@ class Program
      static int Multiplicar(int a, int b)
     {
         return a * b;
+    }
+    
+     // Funcion 9:: invierte una cadena
+    static string InvertirCadena(string texto)
+    {
+        char[] caracteres = texto.ToCharArray();
+        Array.Reverse(caracteres);
+        return new string(caracteres);
     }
 }
