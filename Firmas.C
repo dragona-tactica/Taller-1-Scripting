@@ -30,6 +30,11 @@ class Program
         string cadenaInvertida = InvertirCadena(cadenaOriginal);
         Console.WriteLine($"Cadena original: {cadenaOriginal}");
         Console.WriteLine($"Cadena invertida: {cadenaInvertida}");
+        
+        int limite = 10;
+        int[] secuencia = GenerarSecuencia(limite);
+        Console.WriteLine("Secuencia generada:");
+        ImprimirArray(secuencia);
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -96,5 +101,16 @@ class Program
         char[] caracteres = texto.ToCharArray();
         Array.Reverse(caracteres);
         return new string(caracteres);
+    }
+    
+     // Funcion 10:genera una secuencia de numeros
+    static int[] GenerarSecuencia(int limite)
+    {
+        int[] secuencia = new int[limite];
+        for (int i = 0; i < limite; i++)
+        {
+            secuencia[i] = i + 1;
+        }
+        return secuencia;
     }
 }
