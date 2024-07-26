@@ -22,6 +22,9 @@ class Program
         Console.WriteLine($"Longitud del texto '{texto}': {longitud}");
         
          ImprimirMensaje("Heartless");
+         
+        int producto = Multiplicar(6, 8);
+        Console.WriteLine($"Resultado de la multiplicacion: {producto}");
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -70,9 +73,15 @@ class Program
         return texto.Length;
     }
     
-    // Función 7: Función con parámetros y sin retorno
+    // Funcion 7: Función con parámetros y sin retorno
     static void ImprimirMensaje(string mensaje)
     {
         Console.WriteLine($"Mensaje: {mensaje}");
+    }
+    
+    // Funcion 8: con parámetros y con retorno
+     static int Multiplicar(int a, int b)
+    {
+        return a * b;
     }
 }
