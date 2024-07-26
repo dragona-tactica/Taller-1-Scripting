@@ -26,7 +26,7 @@ class Program
         int producto = Multiplicar(6, 8);
         Console.WriteLine($"Resultado de la multiplicacion: {producto}");
         
-        string cadenaOriginal = "williamn";
+        string cadenaOriginal = "William";
         string cadenaInvertida = InvertirCadena(cadenaOriginal);
         Console.WriteLine($"Cadena original: {cadenaOriginal}");
         Console.WriteLine($"Cadena invertida: {cadenaInvertida}");
@@ -35,6 +35,16 @@ class Program
         int[] secuencia = GenerarSecuencia(limite);
         Console.WriteLine("Secuencia generada:");
         ImprimirArray(secuencia);
+
+        int numero = 6;
+        if (EsPar(numero))
+        {
+            Console.WriteLine($"El número {numero} es par.");
+        }
+        else
+        {
+            Console.WriteLine($"El número {numero} es impar.");
+        }
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -113,4 +123,10 @@ class Program
         }
         return secuencia;
     }
+
+    // Funcion 11: si un número es par
+        static bool EsPar(int numero)
+        {
+            return numero % 2 == 0;
+        }
 }
