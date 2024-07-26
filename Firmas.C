@@ -23,9 +23,10 @@ class Program
         ImprimirMatriz(miMatriz);
 
         Console.WriteLine("Funcion 6");
-        string texto = "Hola, mundo";
-        int longitud = ObtenerLongitud(texto);
-        Console.WriteLine($"Longitud del texto '{texto}': {longitud}");
+        string texto = "OREO";
+        string textoMinusculas = ConvertirAMinusculas(texto);
+        Console.WriteLine($"Texto original: {texto}");
+        Console.WriteLine($"Texto en minusculas: {textoMinusculas}");
 
         Console.WriteLine("Funcion 7");
         string palabraVocales = "Cielo";
@@ -120,7 +121,7 @@ class Program
     //Funcion 1: sin parametros y sin retorno
     static void Saludar()
     {
-        Console.WriteLine("¡Hola!");
+        Console.WriteLine("Hola!");
     }
     
     // Funcion 2: con parametros y sin retorno
@@ -157,10 +158,10 @@ class Program
         }
     }
 
-     // Funcion 6: devuelve la longitud de una cadena
-    static int ObtenerLongitud(string texto)
+     // Funcion 6: convierte una cadena a minúsculas
+    static string ConvertirAMinusculas(string texto)
     {
-        return texto.Length;
+        return texto.ToLower();
     }
     
     // Funcion 7: cuenta el número de vocales en una palabra
