@@ -108,6 +108,11 @@ class Program
         {
             Console.WriteLine($"El número {numeroPrimo} no es primo.");
         }
+
+         Console.WriteLine("Funcion 20");
+        double gradosCelsius = 25.0;
+        double gradosFahrenheit = ConvertirGrados(gradosCelsius);
+        Console.WriteLine($"{gradosCelsius} grados Celsius son {gradosFahrenheit} grados Fahrenheit.");
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -267,16 +272,22 @@ class Program
     }
 
     // Funcion 19: determina si un número es primo
-static bool EsPrimo(int numero)
-{
-    if (numero <= 1) return false; // Los números menores o iguales a 1 no son primos
-
-    // Verificar divisibilidad desde 2 hasta la raíz cuadrada del número
-    for (int i = 2; i <= Math.Sqrt(numero); i++)
+    static bool EsPrimo(int numero)
     {
-        if (numero % i == 0) return false; // Si es divisible por i, no es primo
+        if (numero <= 1) return false; // Los números menores o iguales a 1 no son primos
+    
+        // Verificar divisibilidad desde 2 hasta la raíz cuadrada del número
+        for (int i = 2; i <= Math.Sqrt(numero); i++)
+        {
+            if (numero % i == 0) return false; // Si es divisible por i, no es primo
+        }
+    
+        return true; // Si no es divisible por ningún número en el rango, es primo
     }
 
-    return true; // Si no es divisible por ningún número en el rango, es primo
-}
+    // Funcion 20: convierte grados Celsius a grados Fahrenheit
+    static double ConvertirGrados(double celsius)
+    {
+        return (celsius * 9 / 5) + 32;
+    }
 }
