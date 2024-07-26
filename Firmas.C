@@ -92,6 +92,11 @@ class Program
         string cadenaMayusculas = ConvertirAMayusculas(cadena);
         Console.WriteLine($"Cadena original: {cadena}");
         Console.WriteLine($"Cadena en mayusculas: {cadenaMayusculas}");
+
+        Console.WriteLine("Funcion 18");
+        double radio = 7.0;
+        double areaCirculo = CalcularAreaCirculo(radio);
+        Console.WriteLine($"El area del circulo con radio {radio} es: {areaCirculo}");
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -242,5 +247,11 @@ class Program
     static string ConvertirAMayusculas(string texto)
     {
         return texto.ToUpper();
+    }
+
+    // Funcion 18: calcula el área de un círculo dado su radio
+    static double CalcularAreaCirculo(double radio)
+    {
+        return Math.PI * radio * radio;
     }
 }
