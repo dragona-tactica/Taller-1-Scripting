@@ -20,6 +20,8 @@ class Program
         string texto = "Hola, mundo";
         int longitud = ObtenerLongitud(texto);
         Console.WriteLine($"Longitud del texto '{texto}': {longitud}");
+        
+         ImprimirMensaje("Heartless");
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -66,5 +68,11 @@ class Program
     static int ObtenerLongitud(string texto)
     {
         return texto.Length;
+    }
+    
+    // Función 7: Función con parámetros y sin retorno
+    static void ImprimirMensaje(string mensaje)
+    {
+        Console.WriteLine($"Mensaje: {mensaje}");
     }
 }
