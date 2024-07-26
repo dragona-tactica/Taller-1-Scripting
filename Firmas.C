@@ -86,6 +86,12 @@ class Program
         Console.WriteLine("Funcion 16");
         double promedio = CalcularPromedio(misNumeros);
         Console.WriteLine($"El promedio del array es: {promedio}");
+
+        Console.WriteLine("Funcion 17");
+        string cadena = "marcador";
+        string cadenaMayusculas = ConvertirAMayusculas(cadena);
+        Console.WriteLine($"Cadena original: {cadena}");
+        Console.WriteLine($"Cadena en mayusculas: {cadenaMayusculas}");
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -230,5 +236,11 @@ class Program
             suma += numeros[i];
         }
         return (double)suma / numeros.Length;
+    }
+
+    // Funcion 17: convierte una cadena a mayúsculas
+    static string ConvertirAMayusculas(string texto)
+    {
+        return texto.ToUpper();
     }
 }
