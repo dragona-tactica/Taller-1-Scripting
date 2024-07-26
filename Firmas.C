@@ -72,6 +72,16 @@ class Program
         int maximo = EncontrarMaximo(numeros);
         Console.WriteLine($"El numero mas grande en el array es: {maximo}");
 
+        Console.WriteLine("Funcion 15");
+        string palabraPalindromo = "anilina";
+        if (EsPalindromo(palabraPalindromo))
+        {
+            Console.WriteLine($"La palabra '{palabraPalindromo}' es un palindromo.");
+        }
+        else
+        {
+            Console.WriteLine($"La palabra '{palabraPalindromo}' no es un palindromo.");
+        }
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -186,5 +196,24 @@ class Program
             }
         }
         return maximo;
+    }
+
+    // Funcion 15: determina si una palabra es un palindromo
+    static bool EsPalindromo(string palabra)
+    {
+        int inicio = 0;
+        int fin = palabra.Length - 1;
+        
+        while (inicio < fin)
+        {
+            if (palabra[inicio] != palabra[fin])
+            {
+                return false;
+            }
+            inicio++;
+            fin--;
+        }
+        
+        return true;
     }
 }
