@@ -16,6 +16,10 @@ class Program
         
         int[,] miMatriz = { { 1, 2 }, { 3, 4 } };
         ImprimirMatriz(miMatriz);
+
+        string texto = "Hola, mundo";
+        int longitud = ObtenerLongitud(texto);
+        Console.WriteLine($"Longitud del texto '{texto}': {longitud}");
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -39,13 +43,13 @@ class Program
         }
     }
     
-    // Función 4: con parametros y con retorno
+    // Funcion 4: con parametros y con retorno
     static int Sumar(int a, int b)
     {
         return a + b;
     }
     
-    // Función 5: con una matriz como parametro
+    // Funcion 5: con una matriz como parametro
     static void ImprimirMatriz(int[,] matriz)
     {
         for (int i = 0; i < matriz.GetLength(0); i++)
@@ -58,5 +62,9 @@ class Program
         }
     }
 
-
+     // Funcion 6: devuelve la longitud de una cadena
+    static int ObtenerLongitud(string texto)
+    {
+        return texto.Length;
+    }
 }
