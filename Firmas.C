@@ -7,6 +7,9 @@ class Program
         Saludar();
         
         ImprimirNombre("Vanesa");
+        
+        int[] misNumeros = { 1, 2, 3, 4, 5 };
+        ImprimirArray(misNumeros);
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -19,6 +22,15 @@ class Program
     static void ImprimirNombre(string nombre)
     {
         Console.WriteLine($"Nombre: {nombre}");
+    }
+    
+    // Funcion 3: con un array como parametro usando un bucle for
+    static void ImprimirArray(int[] numeros)
+    {
+        for (int i = 0; i < numeros.Length; i++)
+        {
+            Console.WriteLine(numeros[i]);
+        }
     }
 
 }
