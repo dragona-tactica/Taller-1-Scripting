@@ -49,6 +49,10 @@ class Program
         string palabra = "William";
         int numeroLetras = ContarLetras(palabra);
         Console.WriteLine($"La palabra '{palabra}' tiene {numeroLetras} letras.");
+
+        int numeroFactorial = 5;
+        int factorial = CalcularFactorial(numeroFactorial);
+        Console.WriteLine($"El factorial de {numeroFactorial} es {factorial}.");
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -140,4 +144,14 @@ class Program
         return palabra.Length;
     }
 
+    // Funcion 13: calcula el factorial de un número
+    static int CalcularFactorial(int numero)
+    {
+        int factorial = 1;
+        for (int i = 1; i <= numero; i++)
+        {
+            factorial *= i;
+        }
+        return factorial;
+    }
 }
