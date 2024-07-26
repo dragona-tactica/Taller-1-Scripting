@@ -10,6 +10,9 @@ class Program
         
         int[] misNumeros = { 1, 2, 3, 4, 5 };
         ImprimirArray(misNumeros);
+        
+        int resultado = Sumar(5, 7);
+        Console.WriteLine($"Resultado de la suma de 5 y 7: {resultado}");
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -31,6 +34,12 @@ class Program
         {
             Console.WriteLine(numeros[i]);
         }
+    }
+    
+    // Función 4: con parametros y con retorno
+    static int Sumar(int a, int b)
+    {
+        return a + b;
     }
 
 }
