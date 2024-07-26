@@ -82,6 +82,10 @@ class Program
         {
             Console.WriteLine($"La palabra '{palabraPalindromo}' no es un palindromo.");
         }
+
+        Console.WriteLine("Funcion 16");
+        double promedio = CalcularPromedio(misNumeros);
+        Console.WriteLine($"El promedio del array es: {promedio}");
     }
 
     //Funcion 1: sin parametros y sin retorno
@@ -215,5 +219,16 @@ class Program
         }
         
         return true;
+    }
+
+    // Funcion 16: calcula el promedio de un array de enteros
+    static double CalcularPromedio(int[] numeros)
+    {
+        int suma = 0;
+        for (int i = 0; i < numeros.Length; i++)
+        {
+            suma += numeros[i];
+        }
+        return (double)suma / numeros.Length;
     }
 }
